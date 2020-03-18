@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * print_binary - prints binaryfgd
+ * print_binary - prints binaryfgdthr
  * @a: binaryghfg
  * Return: char*
  */
