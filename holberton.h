@@ -24,4 +24,10 @@ char *return_integer(int n);
 char *print_integer2(int count, int n);
 char *print_int(va_list a);
 char *print_binary(va_list a);
+char *print_hexa(va_list a);
+char *return_hexa(int n);
+char *print_Hexa(va_list a);
+char *return_Hexa(int n);
+char *print_octal(va_list a);
+char *return_octal(int n);
 #endif
