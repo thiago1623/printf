@@ -62,7 +62,7 @@ char *print_octal(va_list a)
 /**
  * _printf - our own f*kin printf
  * @format: tipe of format to print
- * Return: How many characters the string has
+ * Return: How many characters the string hasexis
  */
 int _printf(const char * const format, ...)
 {
