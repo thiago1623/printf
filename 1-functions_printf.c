@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * print_binary - prints binaryfgd
- * @a: binary
+ * @a: binaryghfg
  * Return: char*
  */
 char *print_binary(va_list a)
