@@ -15,6 +15,11 @@ char *return_binary(int n)
 		f /= base;
 		++i;
 	}
+	if (f == 0)
+	{
+		copy_a = "0";
+		return (copy_a);
+	}
 	a = malloc(sizeof(char) * (i + 1));
 	copy_a = malloc(sizeof(char) * (i + 1));
 	if (!copy_a || !a)
