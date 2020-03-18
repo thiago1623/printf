@@ -17,8 +17,8 @@ char *print_binary(va_list a)
  */
 char *return_octal(int n)
 {
-	char *a, *copy_a;
-	int i = 0, j, k, base = 8;
+	char *a = NULL, *copy_a = NULL;
+	int i = 0, j = 0, k = 0, base = 8;
 	int f = n;
 
 	while (f > 0)
@@ -66,12 +66,13 @@ char *print_octal(va_list a)
  */
 int _printf(const char * const format, ...)
 {
-	int i, j, f, g;
-	char *buffer, *d;
+	int i = 0, j = 0, f = 0, g = 0;
+	char *buffer = NULL, *d = NULL;
 	va_list args;
 	fmt_type match[] = {{'c', print_char}, {'i', print_int},
 		       {'d', print_int}, {'s', print_string},
-			    {'b', print_binary}, {'\0', NULL}};
+			    {'b', print_binary}, {'o', print_octal},
+			    {'\0', NULL}};
 
 	va_start(args, format);
 	i = 0, f = 0;
