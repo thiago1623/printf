@@ -120,54 +120,41 @@ format is a character string. The format string is composed of zero or more dire
 			* %
 * You dont have to reproduce the buffer handling of the C library printf function
 * You dont have to handle the flag characters
-	* You dont have to handle field width
-			* You dont have to handle precision
-				* You dont have to handle the length modifiers
-		### 1. Education is when you read the fine print. Experience is what you get if you
-			* Handle the following conversion specifiers:
-																* d
-																* i
-																* You dont have to handle the flag characters
-																* You dont have to handle field width
-																* You dont have to handle precision
-																* You dont have to handle the length modifiers
-
-
-																#### 2. Just because it's in print doesn't mean it's the gospel
-
-																Create a man page for your function.
-
-																Repo:
-
-																GitHub repository: printf
-																File: man_3_printf
-
-																### 3. With a face like mine, I do better in print
-
-																Handle the following custom conversion specifiers:
-
-																* b: the unsigned int argument is converted to binary
-																MIT
-
-																```sh
-																alex@ubuntu:~/c/printf$ cat main.c
-																#include "holberton.h"
-
-																/**
-																 * main - Entry point
-																  *
-																   * Return: Always 0
-																    */
-																    int main(void)
-																    {
-																        _printf("%b\n", 98);
-																	    return (0);
-																	    }
-																	    alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic main.c
-																	    alex@ubuntu:~/c/printf$ ./a.out
-																	    1100010
-																	    alex@ubuntu:~/c/printf$
-
-																	    ```
-
-																	    
+* You dont have to handle field width
+* You dont have to handle precision
+* You dont have to handle the length modifiers
+### 1. Education is when you read the fine print. Experience is what you get if you
+* Handle the following conversion specifiers:
+* d
+* i
+* You dont have to handle the flag characters
+* You dont have to handle field width
+* You dont have to handle precision
+* You dont have to handle the length modifiers
+#### 2. Just because it's in print doesn't mean it's the gospel
+Create a man page for your function.
+Repo:
+GitHub repository: printf
+File: man_3_printf
+### 3. With a face like mine, I do better in print
+Handle the following custom conversion specifiers:
+* b: the unsigned int argument is converted to binary
+MIT
+```sh
+alex@ubuntu:~/c/printf$ cat main.c
+#include "holberton.h"
+/**
+* main - Entry point
+ *
+ * Return: Always 0
+ */
+ int main(void)
+ {
+  _printf("%b\n", 98);
+  return (0);
+ }
+alex@ubuntu:~/c/printf$ gcc -Wall -Wextra -Werror -pedantic main.c
+alex@ubuntu:~/c/printf$ ./a.out
+1100010
+alex@ubuntu:~/c/printf$
+```
