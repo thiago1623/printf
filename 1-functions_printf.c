@@ -36,7 +36,6 @@ int _printf(const char * const format, ...)
 				i++, d = match[j].f(args);
 				for (g = 0; d[g]; g++, f++)
 					buffer[f] = d[g];
-				free(d);
 				break;
 			}
 			else if (format[i] == '%' && format[i + 1] == '%')
