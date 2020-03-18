@@ -11,6 +11,55 @@ char *print_binary(va_list a)
 	return (y);
 }
 /**
+ * return_octal - our own f*kin printf
+ * @n: tipe of format to print
+ * Return: How many characters the string has
+ */
+char *return_octal(int n)
+{
+	char *a, *copy_a;
+	int i = 0, j, k, base = 8;
+	int f = n;
+
+	while (f > 0)
+	{
+		f /= base;
+		++i;
+	}
+	a = malloc(sizeof(char) * (i + 1));
+	copy_a = malloc(sizeof(char) * (i + 1));
+	if (!copy_a || !a)
+	{
+		free(a);
+		free(copy_a);
+		return (NULL);
+	}
+	i = 0, k = 0, f = n;
+	while (f > 0)
+	{
+		a[i] = f % base + 48;
+		f /= base;
+		++i;
+	}
+	for (j = i - 1; j >= 0; j--, k++)
+	{
+		copy_a[k] = a[j];
+	}
+	copy_a[k] = '\0';
+	return (copy_a);
+}
+/**
+ * print_octal - our own f*kin printf
+ * @a: tipe of format to print
+ * Return: How many characters the string has
+ */
+char *print_octal(va_list a)
+{
+	char *y = return_octal(va_arg(a, int));
+
+	return (y);
+}
+/**
  * _printf - our own f*kin printf
  * @format: tipe of format to print
  * Return: How many characters the string has
@@ -21,7 +70,8 @@ int _printf(const char * const format, ...)
 	char *buffer, *d;
 	va_list args;
 	fmt_type match[] = {{'c', print_char}, {'i', print_int},
-		{'s', print_string}, {'b', print_binary}, {'\0', NULL}};
+		       {'d', print_int}, {'s', print_string},
+			    {'b', print_binary}, {'\0', NULL}};
 
 	va_start(args, format);
 	i = 0, f = 0;
